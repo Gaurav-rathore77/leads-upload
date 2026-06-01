@@ -1,0 +1,24 @@
+{
+  "name": "jspro",
+  "version": "1.0.0",
+  "description": "JSPRO - Professional Digital Agency",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "install-all": "npm install && npm install --prefix client"
+  },
+  "keywords": ["agency", "digital", "web-development", "react", "express"],
+  "author": "JSPRO Agency",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.3",
+    "nodemailer": "^8.0.10",
+    "nodemon": "^3.1.14"
+  }
+}

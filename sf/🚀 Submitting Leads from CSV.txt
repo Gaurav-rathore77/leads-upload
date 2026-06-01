@@ -1,0 +1,145 @@
+🚀 Submitting Leads from CSV
+1. Kishan Jaiswal | omprakash4559@gmail.com | 916389333373 | Kanpur
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlYWYAY\"}"
+2. Dr.S.P. Verma | shivpoojanv16@gmail.com | 918545852557 | ????????
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlYbYAI\"}"
+3. Rahul Vishwakarama | rahul7770879667@gmail.com | 7067705703 | Indore
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlYgYAI\"}"
+4. Shadab Hussain | shadabhussain0011@gmail.com | 919140446196 | Delhi
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlYlYAI\"}"
+5. Aachal | aachal272000@gmail.com | 919889510709 | Varanasi
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlYqYAI\"}"
+6. Jyoti Kumari | appu1769tilu@gmail.com | 917631365326 | Motihari
+Status: ❌ Error — "{\"errors\":[\"Invalid id: An unexpected error occurredSObject row was retrieved via SOQL without querying the requested field: User_Details__c.Name\"],\"success\":false,\"id\":null}"
+7. Viijay DawaR | vijjudawar123@gmail.com | 916261191344 | Indore
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlYvYAI\"}"
+8. Deepak Kumar | deepaknagla72@gmail.com | 917830409551 | Khurja
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZ0YAI\"}"
+9. Avinash Singh | shakti.12singh365@gmail.com | 919953039790 | Lucknow
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZ5YAI\"}"
+10. Anuj Anuj | anujkumaretah234@gmail.com | 917668006563 | ??????????
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZAYAY\"}"
+11. Arjun Malviya | arjunmalviya1011@gmail.com | 917024900751 | Ujjain
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZFYAY\"}"
+12. Munna kumar | munnakumar16921@gmail.com | 918789348605 | Sisai
+Status: ❌ Error — "{\"errors\":[\"Insert failed. First exception on row 0; first error: FIELD_CUSTOM_VALIDATION_EXCEPTION, lead with the same Email or Phone already exists.: []\"],\"success\":false,\"id\":null}"
+13. Satya Singh | satyamkr930@gmail.com | 916202656420 | Ahmedabad
+Status: ❌ Error — "{\"errors\":[\"Lead already exists.\"],\"success\":true,\"id\":\"a03IU00001kDIvsYAG\"}"
+14. nandkishor Vishwakarma | hhi756874@gmail.com | 918968974622 | Ludhiana
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZKYAY\"}"
+15. khala snof | wmultani6@gmail.com | 918824462183 | Jaipur
+Status: ❌ Error — "{\"errors\":[\"Invalid id: An unexpected error occurredSObject row was retrieved via SOQL without querying the requested field: User_Details__c.Name\"],\"success\":false,\"id\":null}"
+16. &�m�t s��gh | ss9721151688@gmail.com | 917522020258 | Up
+Status: ❌ Error — [{"message":"The HTTP entity body is required, but this request has no entity body.","errorCode":"JSON_PARSER_ERROR"}]
+17. ?Vikash Vishwakarma | vikasvishwakarma6688@gmail.com | 917860388493 | Mumbai
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZPYAY\"}"
+18. J P Shingh | jayprakashkumar140@gmail.com | 919060955600 | Patna New City
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZUYAY\"}"
+19. Om Kumar | om107474@gmail.com | 16204537084 | 8473084
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZZYAY\"}"
+20. Zameer Khan | zameerkhan5072@gmail.com | 919892586991 | Delhi
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZeYAI\"}"
+21. NAVEEN DAGAR | naveendagar2016@gmail.com | 917891433536 | MAKRO, Singhana
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZjYAI\"}"
+22. Vicky Choudhary | vkumar29595@gmail.com | 919625945175 | noida
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZoYAI\"}"
+23. Niraj Singh Kushwaha | nirajkumar0047@gmail.com | 917301431408 | Banglore
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZtYAI\"}"
+24. Laxmikant Sachin | sachinumar2066@gmail.com | 919554389360 | Thanjavur
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZyYAI\"}"
+25. Ravi Rathore | ravirathore9811@gmail.com | 917049699373 | Bilaspur
+Status: ❌ Error — "{\"errors\":[\"Insert failed. First exception on row 0; first error: CANNOT_EXECUTE_FLOW_TRIGGER, We can't save this record because the “Lead Opportunity CityStateMatcher flow” process failed. Give your Salesforce admin these details. This error occurred when the flow tried to update records: FIELD_INTEGRITY_EXCEPTION: The Address__StateCode__s field contains Chhattisgarh, which isn't an available state. Your administrator can add it for you.. You can look up ExceptionCode values in the SOAP API Developer Guide. Error ID: 678635783-6160879 (2033870089)k up ExceptionCode values in the SOAP API Developer Guide. Error ID: 678635783-6160879 (2033870089): []\"],\"success\":false,\"id\":null}"
+26. ASIF khan | asifalinagli@gmail.com | 9548007984 | Moradabad
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khla8YAA\"}"
+27. Dev Chandaliya | dev123321rkumar@gmail.com | 918800246284 | Mathura
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlaDYAQ\"}"
+28. Yogesh kumar | rajput.yogesh66@gmail.com | 919068629607 | Lucknow
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlaIYAQ\"}"
+29. Prakash Bhawsar | prakash1bhavsar@gmail.com | 919636657235 | Udaipur
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlYmYAI\"}"
+30. Kailash Tiwari | kailashtiwari885.kt@gmail.com | 9731739645 | Bangalore
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlaNYAQ\"}"
+31. Pawan Vishwakarma | pavanvishwakarma345@gmail.com | 919644540628 | Ujjain
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlaSYAQ\"}"
+32. Ganesh Kumar | ganeshrajambani@gmail.com | 918409474663 | sheikhpura
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlZVYAY\"}"
+33. Advocates Archie Mishra | parchitmishra@gmail.com | 6392875781 | Farrukhabad
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlaXYAQ\"}"
+34. �?�__?????? __A???? | thakurabhishek48029@gmail.com | 918305062958 | Tendukheda narsinghpur mp
+Status: ❌ Error — [{"message":"The HTTP entity body is required, but this request has no entity body.","errorCode":"JSON_PARSER_ERROR"}]
+35. Ravi Yadav | ravikumar8409389854@gmail.com | 918409389854 | Bihar Sharif
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlacYAA\"}"
+36. Bharat Bhusan Behera | vags@yahoo.com | 919999563868 | Delhi
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlahYAA\"}"
+37. Sumit Verma | sumitverma718@gmail.com | 919991164398 | Safidon
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlamYAA\"}"
+38. AVIK ROY | avik.roy1809@gmail.com | 919051549706 | Kolkata
+Status: ❌ Error — "{\"errors\":[\"Invalid id: An unexpected error occurredSObject row was retrieved via SOQL without querying the requested field: User_Details__c.Name\"],\"success\":false,\"id\":null}"
+39. Official_ Sukh Nilowal | snilowalia@gmail.com | 919814094037 | Sangrur
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlarYAA\"}"
+40. Msp Baghel | manjeshpal273@gmail.com | 916268304115 | Gwalior
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlawYAA\"}"
+41. Amit Redhu | kumarredhu49@gmail.com | 919729428695 | Hisar
+Status: ❌ Error — "{\"errors\":[\"Invalid id: An unexpected error occurredSObject row was retrieved via SOQL without querying the requested field: User_Details__c.Name\"],\"success\":false,\"id\":null}"
+42. @RAVI JADEJA _10S | ravikr1891@gmail.com | 918986957980 | Patna
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlb1YAA\"}"
+43. Atish Gautam | gautamkqr777@gmail.com | 917325036002 | Kodarma
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlb6YAA\"}"
+44. Rajesh Kumar | rk7985537013@gmail.com | 917985537013 | Lucknow
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbBYAQ\"}"
+45. Vicky Choudhary | mvickymuwal00@gmail.com | 919782181495 | Jaipur
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlWqYAI\"}"
+46. Mayur Hirpara | hmayur2000@gmail.com | 9409325809 | Ahmedabad
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbGYAQ\"}"
+47. sonu yadav | sonuyadav43825@gmail.com | 917742111512 | Alwar
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbLYAQ\"}"
+48. Karan Ghayal patil | karanghayal257@gmail.com | 7666614355 | Khuldabad
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbQYAQ\"}"
+49. Mangilal Rathod | pusadmangilal28@gmail.com | 918390545718 | Pusad
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbVYAQ\"}"
+50. Mr-anil Gundara | anilrajak4485@gmail.com | 918349818993 | Maharajpur (Chhatarpur)
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbaYAA\"}"
+51. _???????? ???????????? _ | zaidansari4002@gmail.com | 919265077793 | Ahmedabad
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbfYAA\"}"
+52. adarsh vishwakarma | 99vishwakarma9090@gmail.com | 9801941214 | Deoria
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbkYAA\"}"
+53. Anand Kumar | anandkumar93197@gmail.com | 919319704521 | 9319704521
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbpYAA\"}"
+54. Shahban Khan | shahbankhan999@gmail.com | 917800631626 | mumbai
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbuYAA\"}"
+55. Sunil_511 | prajapat.sunil8094@gmail.com | 919828032511 | Jaipur
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbzYAA\"}"
+56. Anuj kumar | anujkumarhzb7@gmail.com | 6200182826 | Hazaribag
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlc4YAA\"}"
+57. Next Bharat | shankardayal360@gmail.com | 916201228677 | Patna
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlc9YAA\"}"
+58. Harish Binzade | harishbinzade@gmail.com | 919657450674 | Bhandara
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlcEYAQ\"}"
+59. Sashikant Chaubey | sashikantc838@gmail.com | 17479751160 | Kaimur
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlcJYAQ\"}"
+60. Neeraj Pandey | Neerajpandey88@yahoo.com | 918182073222 | Barhaj
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlcOYAQ\"}"
+61. naveen | naveenvats1994@gmail.com | 917206358918 | Karnal
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlcTYAQ\"}"
+62. jyoti | jyotikumarijyoti664@gmail.com | 919467473069 | Jyoti
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlcYYAQ\"}"
+63. Gajendra Kumar | gk2004903@gmail.com | 917061325784 | Arwal
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlcdYAA\"}"
+64. prateek shyamal main Pratik samuh bol raha hun main account ka naukari karna chahta hun | prateekshyamal@gmail.com | 919971270255 | vasant vihar
+Status: ❌ Error — "{\"errors\":[\"Invalid id: \"],\"success\":false,\"id\":null}"
+65. Manish Kumar Kushwaha | nishamanishlove3@gmail.com | 917070266320 | Jaipur
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlciYAA\"}"
+66. M L Manglodi | madanmanglodi6@gmail.com | 9116919503 | Jaipur
+Status: ❌ Error — "{\"errors\":[\"Invalid id: An unexpected error occurredSObject row was retrieved via SOQL without querying the requested field: User_Details__c.Name\"],\"success\":false,\"id\":null}"
+67. Alfaiz khan | khanalfaiz24831@gmail.com | 919109498784 | Biaora
+Status: ❌ Error — "{\"errors\":[\"Invalid id: An unexpected error occurredSObject row was retrieved via SOQL without querying the requested field: User_Details__c.Name\"],\"success\":false,\"id\":null}"
+68. Rajkumar Anjali Sahu | rajkumarsahu8175898508@gmail.com | 918175898508 | Lalitpur
+Status: ❌ Error — "{\"errors\":[],\"success\":true,\"id\":\"a03IU00001khlbCYAQ\"}"
+69. Harsh Wardhan | harshsingh112231@gmail.com | 919780012419 | Muzaffarpur
+Status: ❌ Error — "{\"errors\":[\"Invalid id: An unexpected error occurredSObject row was retrieved via SOQL without querying the requested field: User_Details__c.Name\"],\"success\":false,\"id\":null}"
+70. Mohd Asif | mohdasif000786sln@gmail.com | 916398713621 | Lucknow
+Status: ❌ Error — "{\"errors\":[\"Lead already exists.\"],\"success\":true,\"id\":\"a03IU00001khfVbYAI\"}"
+✅ Summary:
+✅ Successful: 0
+🔁 Duplicates: 0
+❌ Errors: 70
