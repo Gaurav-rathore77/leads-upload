@@ -1,0 +1,25 @@
+# Default Index Page
+DirectoryIndex dashboard.php index.php index.html
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect to HTTPS (uncomment if using SSL)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Prevent Directory Listing
+Options -Indexes
+
+# PHP Settings
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+php_value max_input_time 300

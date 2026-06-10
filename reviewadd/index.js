@@ -6,10 +6,8 @@ import pLimit from "p-limit";
 const API_URL =
   "https://crm.reviewadda.com/leadsPanel/api/create-student";
 
-
 const API_KEY = "VidhyaV_2026";
 const SOURCE_ID = "80";
-
 
 const BATCH_SIZE = 50;
 const CONCURRENT_REQUESTS = 5;
@@ -20,6 +18,10 @@ const limit = pLimit(CONCURRENT_REQUESTS);
 let batch = [];
 let promises = [];
 
+// Counters
+let totalRecords = 0;
+let successCount = 0;
+let failedCount = 0;
 
 async function retryRequest(payload, retries = RETRY_COUNT) {
   try {
@@ -29,8 +31,21 @@ async function retryRequest(payload, retries = RETRY_COUNT) {
       },
     });
 
-    console.log(`Success: ${payload.email}`);
+    // Adjust according to your API response
+    const data = response.data;
 
+    // If API returns success=false for existing lead
+    if (
+      data?.success === false ||
+      data?.message?.toLowerCase().includes("already")
+    ) {
+      console.log(`Already Exists: ${payload.email}`);
+      failedCount++;
+      return false;
+    }
+
+    console.log(`Success: ${payload.email}`);
+    successCount++;
     return true;
   } catch (err) {
     console.log(`Error for ${payload.email}`);
@@ -38,6 +53,16 @@ async function retryRequest(payload, retries = RETRY_COUNT) {
     if (err.response) {
       console.log("STATUS:", err.response.status);
       console.log("DATA:", err.response.data);
+
+      // Count duplicate/already exists as failed
+      if (
+        err.response.data?.message
+          ?.toLowerCase()
+          .includes("already")
+      ) {
+        failedCount++;
+        return false;
+      }
     } else {
       console.log(err.message);
     }
@@ -47,54 +72,54 @@ async function retryRequest(payload, retries = RETRY_COUNT) {
       return retryRequest(payload, retries - 1);
     }
 
+    failedCount++;
     return false;
   }
 }
 
-// Upload batch
 async function uploadBatch(batchData) {
   try {
     await Promise.all(
       batchData.map((row) =>
-  limit(() =>
-    retryRequest({
-      key: API_KEY,
+        limit(() =>
+          retryRequest({
+            key: API_KEY,
 
-      name: row.Name?.trim(),
+            name: row.Name?.trim(),
 
-      email: row.Email?.toLowerCase().trim(),
+            email: row.Email?.toLowerCase().trim(),
 
-      phone: row.PhoneNo
-        ?.replace("p:+91", "")
-        ?.replace("p:+", "")
-        ?.replace("p:", "")
-        ?.replace(/\D/g, "")
-        ?.trim(),
+            phone: row.PhoneNo
+              ?.replace("p:+91", "")
+              ?.replace("p:+", "")
+              ?.replace("p:", "")
+              ?.replace(/\D/g, "")
+              ?.trim(),
 
-      clg_id:
-        row.College?.trim() ||
-        "Lovely Professional",
+            clg_id:
+              row.College?.trim() ||
+              "Lovely Professional",
 
-      course:
-        row.Course?.trim() ||
-        "B.Tech",
+            course:
+              row.Course?.trim() ||
+              "B.Tech",
 
-      dob:
-        row.DOB?.trim() ||
-        "2000-01-01",
+            dob:
+              row.DOB?.trim() ||
+              "2000-01-01",
 
-      qualification:
-        row.Qualification?.trim() ||
-        "12th",
+            qualification:
+              row.Qualification?.trim() ||
+              "12th",
 
-      city: row.City?.trim(),
+            city: row.City?.trim(),
 
-      source_id: SOURCE_ID,
+            source_id: SOURCE_ID,
 
-      state: row.State?.trim(),
-    })
-  )
-)
+            state: row.State?.trim(),
+          })
+        )
+      )
     );
 
     console.log(
@@ -105,15 +130,16 @@ async function uploadBatch(batchData) {
   }
 }
 
-// Read CSV
 fs.createReadStream("data.csv")
   .pipe(csv())
   .on("data", (row) => {
-    // Basic validation
     if (!row.Email || !row.PhoneNo || !row.Name) {
       console.log("Skipped invalid row");
+      failedCount++;
       return;
     }
+
+    totalRecords++;
 
     batch.push(row);
 
@@ -123,14 +149,18 @@ fs.createReadStream("data.csv")
     }
   })
   .on("end", async () => {
-    // Remaining batch
     if (batch.length > 0) {
       promises.push(uploadBatch(batch));
     }
 
     await Promise.all(promises);
 
+    console.log("\n========== FINAL REPORT ==========");
+    console.log(`Total Records : ${totalRecords}`);
+    console.log(`Success       : ${successCount}`);
+    console.log(`Failed        : ${failedCount}`);
     console.log(
-      "All leads uploaded successfully!"
+      `Processed     : ${successCount + failedCount}`
     );
+    console.log("==================================");
   });
