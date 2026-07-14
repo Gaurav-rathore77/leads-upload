@@ -1,0 +1,30 @@
+[
+  {
+    "payload": {
+      "firstname": "testNak",
+      "mcc": 91,
+      "mobile": "9415841415",
+      "email": "testnak@gmail.com",
+      "gender": "Male",
+      "interest": {
+        "institution": "",
+        "stream": "Engineering",
+        "degree": "Post Graduate",
+        "course": "Bachelor of Technology",
+        "modeofstudy": "Full Time",
+        "budget": 5000,
+        "prefcountry": "India",
+        "prefstate": "Rajasthan",
+        "prefcity": "Kota"
+      },
+      "tracking": {
+        "utm_channel": "Online",
+        "utm_source": "google adwords",
+        "utm_campaign": "Lead Upload",
+        "utm_medium": ""
+      }
+    },
+    "code": "NOT_ACCEPTABLE",
+    "error": "Given stream, degree and course combination is not available"
+  }
+]
