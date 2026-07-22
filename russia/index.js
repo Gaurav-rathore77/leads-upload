@@ -54,5 +54,5 @@ fs.createReadStream("data.csv")
 
     await Promise.all(promises);
 
-    console.log("🎉 All data uploaded!");
+    console.log("All data uploaded!");
   });  
