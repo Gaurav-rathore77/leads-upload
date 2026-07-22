@@ -5,7 +5,7 @@
 ![React](https://img.shields.io/badge/React-19-blue)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
 
-## 📑 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Quick Start](#-quick-start)
@@ -180,7 +180,7 @@ Common table structures across portals:
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### Portal Configuration
 Each portal has its own configuration in `index.php`:
@@ -208,7 +208,7 @@ EMAIL_PASS=your-password
 
 ---
 
-## 📱 Usage Guide
+## Usage Guide
 
 ### Using the Dashboard
 1. **Search Portals**: Use the search boxes to find specific portals
@@ -245,7 +245,7 @@ npm run lint
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -276,7 +276,7 @@ npm run lint
 
 ---
 
-## 📞 Support
+##  Support
 
 For issues or questions:
 1. Check portal-specific documentation
@@ -304,7 +304,7 @@ For issues or questions:
 
 ---
 
-## 📄 License
+## License
 
 This system is proprietary and for internal use only.
 
