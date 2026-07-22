@@ -15,7 +15,7 @@ $logs = [];
 if ($run) {
 
     if (!file_exists($csvFile)) {
-        die("❌ leads.csv not found");
+        die("leads.csv not found");
     }
 
     set_time_limit(0);
@@ -66,12 +66,12 @@ if ($run) {
 
         if (!curl_errno($ch) && $httpCode === 200) {
             $success++;
-            $logs[] = "✅ {$mobile} uploaded successfully";
+            $logs[] = "{$mobile} uploaded successfully";
         } else {
             $failed++;
             $reason = $decoded['Message'] ?? $decoded['message'] ?? 'Unknown API error';
             $failReasons[$reason] = ($failReasons[$reason] ?? 0) + 1;
-            $logs[] = "❌ {$mobile} failed → {$reason}";
+            $logs[] = "{$mobile} failed → {$reason}";
         }
 
         curl_close($ch);
