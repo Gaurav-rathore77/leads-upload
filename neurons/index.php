@@ -9,7 +9,7 @@ $csvFile = __DIR__ . '/leads.csv';
 
 $results = [];
 
-// ✅ Counters
+// Counters
 $totalLeads = 0;
 $successLeads = 0;
 $failedLeads = 0;
@@ -38,7 +38,7 @@ function mapCourse($courseRaw) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!file_exists($csvFile)) {
-        die("❌ leads.csv file not found");
+        die("leads.csv file not found");
     }
 
     set_time_limit(0);
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     while (($row = fgetcsv($file)) !== false) {
 
-        $totalLeads++; // ✅ count total
+        $totalLeads++; //  count total
 
         $name      = $row[0] ?? '';
         $email     = $row[1] ?? '';
@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $status = ($code == 200 && ($json['status'] ?? '') === 'Success') ? 'Success' : 'Fail';
 
-        // ✅ success/fail count
+        // success/fail count
         if ($status === 'Success') {
             $successLeads++;
         } else {

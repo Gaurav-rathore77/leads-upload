@@ -90,11 +90,11 @@ fs.createReadStream("data.csv")
 
         success++;
 
-        console.log(`\n✅ SUCCESS : ${lead["Customer Name"]}`);
+        console.log(`\n SUCCESS : ${lead["Customer Name"]}`);
 
       } catch (err) {
 
-        console.log(`\n❌ FAILED : ${lead["Customer Name"]}`);
+        console.log(`\n FAILED : ${lead["Customer Name"]}`);
 
         console.log("Message :", err.message);
 
