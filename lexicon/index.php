@@ -8,11 +8,11 @@ $college_id = "375";
 $csvFile = __DIR__ . '/leads.csv';
 
 $results = [];
-
+// "add lots of things here"
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!file_exists($csvFile)) {
-        die("❌ leads.csv not found");
+        die("leads.csv not found");
     }
 
     set_time_limit(0);
