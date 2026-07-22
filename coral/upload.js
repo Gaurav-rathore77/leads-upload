@@ -13,7 +13,7 @@ fs.createReadStream("data.csv")
   .on("data", (row) => leads.push(row))
   .on("end", async () => {
 
-    console.log(`\n========== Upload Started ==========\n`);
+    console.log("\n========== Upload Started ==========\n");
     console.log(`Total Leads : ${leads.length}\n`);
 
     let success = 0;
@@ -22,11 +22,17 @@ fs.createReadStream("data.csv")
 
       const lead = leads[i];
 
+      console.log("\n====================================");
+      console.log(`Lead ${i + 1}/${leads.length}`);
+      console.log("Customer :", lead["Customer Name"]);
+      console.log("Payload :", JSON.stringify(lead, null, 2));
+      console.log("====================================");
+
       try {
 
-        // ===============================
+        // ===========================
         // SalesMax
-        // ===============================
+        // ===========================
         const salesmax = await axios.post(
           process.env.SALESMAX_API,
           lead,
@@ -34,19 +40,28 @@ fs.createReadStream("data.csv")
             headers: {
               "Content-Type": "application/json"
             },
+            timeout: 30000,
             validateStatus: () => true
           }
         );
 
-        console.log(`SalesMax : ${salesmax.status}`);
+        console.log("\n------ SalesMax ------");
+        console.log("Status :", salesmax.status);
+        console.log("Response :", JSON.stringify(salesmax.data, null, 2));
 
-        if (salesmax.status < 200 || salesmax.status >= 300) {
-          throw new Error("SalesMax Upload Failed");
+        if (
+          salesmax.status < 200 ||
+          salesmax.status >= 300 ||
+          salesmax.data?.success === false
+        ) {
+          throw new Error(
+            salesmax.data?.message || "SalesMax Upload Failed"
+          );
         }
 
-        // ===============================
+        // ===========================
         // Google Sheet
-        // ===============================
+        // ===========================
         const sheet = await axios.post(
           process.env.GOOGLE_SHEET_API,
           lead,
@@ -54,36 +69,50 @@ fs.createReadStream("data.csv")
             headers: {
               "Content-Type": "application/json"
             },
-            maxRedirects: 5,
+            timeout: 30000,
             validateStatus: () => true
           }
         );
 
-        console.log(`Google Sheet : ${sheet.status}`);
-        console.log("Google Response :", sheet.data);
+        console.log("\n------ Google Sheet ------");
+        console.log("Status :", sheet.status);
+        console.log("Response :", JSON.stringify(sheet.data, null, 2));
 
-        if (sheet.status < 200 || sheet.status >= 300) {
-          throw new Error("Google Sheet Upload Failed");
+        if (
+          sheet.status < 200 ||
+          sheet.status >= 300 ||
+          sheet.data?.success === false
+        ) {
+          throw new Error(
+            sheet.data?.message || "Google Sheet Upload Failed"
+          );
         }
-
-        console.log(`✅ ${i + 1}/${leads.length} ${lead["Customer Name"]}`);
 
         success++;
 
+        console.log(`\n✅ SUCCESS : ${lead["Customer Name"]}`);
+
       } catch (err) {
 
-        console.log(`❌ ${i + 1}/${leads.length} ${lead["Customer Name"]}`);
+        console.log(`\n❌ FAILED : ${lead["Customer Name"]}`);
 
-        console.log(err.message);
+        console.log("Message :", err.message);
+
+        if (err.response) {
+          console.log("Status :", err.response.status);
+          console.log("Response :", err.response.data);
+        }
 
         failed.push({
           lead,
-          error: err.message
+          error: err.message,
+          status: err.response?.status || null,
+          response: err.response?.data || null
         });
 
       }
 
-      await new Promise(r => setTimeout(r, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
     }
 
@@ -92,9 +121,10 @@ fs.createReadStream("data.csv")
       JSON.stringify(failed, null, 2)
     );
 
-    console.log("\n==============================");
-    console.log(`Success : ${success}`);
-    console.log(`Failed  : ${failed.length}`);
-    console.log("==============================");
+    console.log("\n====================================");
+    console.log(`Total Leads : ${leads.length}`);
+    console.log(`Success     : ${success}`);
+    console.log(`Failed      : ${failed.length}`);
+    console.log("====================================");
 
   });
